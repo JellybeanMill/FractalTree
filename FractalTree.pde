@@ -6,8 +6,7 @@ public void setup()
 	noLoop();
 }
 public void draw()
-{   
-	background(0);   
+{
 	stroke(0,255,0);   
 	line(500,650,500,500);
 } 
@@ -31,8 +30,23 @@ public void drawBranches(int x,int y, float branchLength, float angle)
 }
 class Branch
 {
+	float myXStart,myXEnd,myYStart,myXEnd,myLength,myAngle;
 	Branch(int x,int y,float branchLength,float angle)
 	{
-
+		myXStart = x;
+		myXEnd = myXStart+(int)(nowLength*Math.cos(myAngle));
+		myY = y;
+		myLength = branchLength;
+		myAngle = angle;
+	}
+	public void showBranches()
+	{
+		line(myX,myY,myX+(int)(nowLength*Math.cos(myAngle)),myY+(int)(nowLength*Math.sin(myAngle)));
+		for(int i=0;i<maxBranches;i++)
+			createBranches()
+	}
+	public void create()
+	{
+		branches.add(new Branch())
 	}
 }
