@@ -3,6 +3,7 @@ int counter = 0;
 public void setup() 
 {   
 	size(1000,600);
+	background(0);
 	branches.add(new Branch(500,650,200,-PI/2));
 }
 public void draw()
