@@ -21,25 +21,7 @@ public void draw()
 		textSize(30);
 		text("Tree Finished",500,500);
 	}
-} /*
-public void mouseClicked()
-{
-	redraw();
 }
-public void drawBranches(int x,int y, float branchLength, float angle) 
-{
-	if(branchLength>5)
-	{
-		for(int i=0;i<maxBranches;i++)
-		{
-			float angleAdd = (float)(Math.random()*PI*2.0/3.0)-(PI/3.0);
-			float nowLength= (float)(branchLength*((Math.random()*0.4)+0.5));
-			line(x,y,x+(int)(nowLength*Math.cos(angle+angleAdd)),y+(int)(nowLength*Math.sin(angle+angleAdd)));
-			new Branch(x+(int)(nowLength*Math.cos(angle+angleAdd)),y+(int)(nowLength*Math.sin(angle+angleAdd)),nowLength,angle+angleAdd);
-		}
-	}
-}
-*/
 class Branch
 {
 	private float myXStart,myXEnd,myYStart,myYEnd,myLength,myAngle;
