@@ -1,16 +1,16 @@
-ArrayList<Branch>branches = new ArrayList<Branch>();
+ArrayList<Branch>drawnBranches = new ArrayList<Branch>();
 int counter = 0;
 public void setup() 
 {   
 	size(1000,600);
 	background(0);
-	branches.add(new Branch(500,650,200,-PI/2));
+	drawnBranches.add(new Branch(500,650,200,-PI/2));
 }
 public void draw()
 {
 	stroke(0,255,0);
-	branches.get(counter).showBranches();
-	if(counter<branches.size())
+	drawnBranches.get(counter).showBranches();
+	if(counter<drawnBranches.size())
 	{
 		counter++;
 	}
@@ -48,6 +48,6 @@ class Branch
 	{
 		float angleAdd = (float)(Math.random()*PI*2.0/3.0)-(PI/3.0);
 		float lengthAdd = (float)((Math.random()*0.4)+0.5);
-		branches.add(new Branch(myXEnd,myYEnd,myLength*lengthAdd,myAngle+angleAdd));
+		drawnBranches.add(new Branch(myXEnd,myYEnd,myLength*lengthAdd,myAngle+angleAdd));
 	}
 }
