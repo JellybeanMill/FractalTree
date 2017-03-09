@@ -1,8 +1,8 @@
-ArrayList<Branch>drawnBranches;
+// ArrayList<Branch>drawnBranches;
+	ArrayList<Branch>drawnBranches = new ArrayList<Branch>();
 int counter = 0;
 public void setup() 
 {   
-	drawnBranches = new ArrayList<Branch>();
 	size(1000,600);
 	background(0);
 	drawnBranches.add(new Branch(500,650,200,-PI/2));
