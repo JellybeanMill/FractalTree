@@ -1,29 +1,3 @@
-// ArrayList<Branch>drawnBranches;
-ArrayList<Branch>drawnBranches = new ArrayList<Branch>();
-int counter = 0;
-public void setup() 
-{   
-	size(1000,600);
-	background(0);
-	drawnBranches.add(new Branch(500,650,200,-PI/2));
-}
-public void draw()
-{
-	stroke(0,255,0);
-	drawnBranches.get(counter).showBranches();
-	if(counter<drawnBranches.size())
-	{
-		counter++;
-	}
-	else
-	{
-		fill(255);
-		textAlign(CENTER,CENTER);
-		textSize(30);
-		text("Tree Finished",500,500);
-	}
-}
-/*
 class Branch
 {
 	private float myXStart,myXEnd,myYStart,myYEnd,myLength,myAngle;
@@ -52,4 +26,4 @@ class Branch
 		float lengthAdd = (float)((Math.random()*0.4)+0.5);
 		drawnBranches.add(new Branch(myXEnd,myYEnd,myLength*lengthAdd,myAngle+angleAdd));
 	}
-}*/
+}
